@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/eadda94817.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="CartStyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+
+        <div class="TopHeader">
+            <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div class="HeaderContact">
+                    <span>+971 (58) 135-9871</span>
+                    <span>Our Location</span>
+                </div>
+
+                <p class="mb-0">Super Value Deals - Save More with coupons</p>
+                <!-- <a href="#">Log In / Register</a> -->
+            </div>
+        </div>
+
+        <nav class="Navbar navbar navbar-expand-lg container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.svg" class="NavbarLogoImg" alt="Logo">
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="MainNavbar">
+                <ul class="navbar-nav me-auto gap-lg-4">
+                    <li class="nav-item"><a href="./index.html" class="nav-link NavbarItemLink active-Link">Home</a>
+                    </li>
+                    <li class="nav-item"><a href="./Products.html" class="nav-link NavbarItemLink">Shop</a></li>
+                    <li class="nav-item"><a href="./FAQ.html" class="nav-link NavbarItemLink">FAQ</a></li>
+                    <li class="nav-item"><a href="./Cart.html" class="nav-link NavbarItemLink">Cart</a></li>
+                    <li class="nav-item"><a href="./ContactUs.html" class="nav-link NavbarItemLink">Contact Us</a></li>
+                </ul>
+
+                <!-- Search -->
+                <div class="container py-3 w-50">
+                    <div class="position-relative">
+                        <div class="input-group">
+                            <input type="text" id="InputBox" class="form-control" placeholder="Search for items...">
+                            <span class="input-group-text">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                        <div class="ResultBox position-absolute w-100 bg-white border rounded mt-1 shadow"
+                            style="z-index: 1000; max-height: 250px; overflow-y:auto;"></div>
+                    </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="NavbarSearchButtons d-flex">
+                    <a class="NavbarBtns">
+                        <img src="images/icon-heart.svg">
+                        <span class="CountAddedItems">0</span>
+                    </a>
+                    <a class="NavbarBtns" href="Cart.html">
+                        <img src="images/icon-cart.svg">
+                        <span id="CountCartAddedItems" class="CountAddedItems">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container my-5">
+        <div class="TableContainer table-responsive">
+            <table class="table align-middle text-center">
+                <thead>
+                    <tr class="text-center text-secondary">
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="TableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container d-flex justify-content-center">
+        <div class="row g-2 w-75">
+
+
+            <div class="col-lg-12 col-12 ">
+                <div class="card">
+                    <div class="TabelsHeader card-header border-0 text-white fw-bold py-3">
+                        CART TOTAL
+                    </div>
+                    <div class="card-body py-2">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between py-3 px-3">
+                                <span class="text-secondary fw-medium">Subtotal</span>
+                                <span id="SubtotalSpan" class="text-muted">$0</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between py-3 px-3 ">
+                                <span class="text-secondary fw-medium">Shipping</span>
+                                <span id="ShippingSpan" class="text-muted">$0</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between fw-bold fs-5 py-4 px-3">
+                                <span>Total</span>
+                                <span id="FinalTotal">$0</span>
+                            </li>
+                        </ul>
+                        <div class="p-4 pt-0 text-end">
+                            <a href="./CheckOut.html" class="ApplyButton btn  fw-bold text-nowrap w-100">
+
+                                PROCEED TO CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="border-top">
+        <div class="container-fluid py-3 mb-3 border-bottom" style="background-color: #abcac5;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 d-flex align-items-center ">
+                        <i class="bi bi-envelope-at fs-3 me-3 text-muted"></i>
+                        <h5 class="mb-0 me-3">Sign up to Newsletter</h5>
+                        <span class="text-muted small">...and receive $25 coupon for first shopping.</span>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="email" class="form-control py-2" placeholder="Enter your email">
+                            <button class="btn btn-dark px-4" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="images/logo.svg" alt="Evara" class="mb-3" style="height: 40px;">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <p class="text-muted mb-1 small"><strong>Address:</strong> ITI - Knowledge City - Egypt</p>
+                    <p class="text-muted mb-1 small"><strong>Phone:</strong> +971 (58) 135-9871</p>
+
+                    <h6 class="fw-bold">Follow US</h6>
+                    <div class="d-flex gap-4 text-muted fs-4 d-inline">
+                        <a href="#" class="text-reset  "><i class="fa-brands fa-facebook-f social-link"></i></a>
+                        <a href="#" class="text-reset "><i class="fa-brands fa-twitter social-link"></i></a>
+                        <a href="#" class="text-reset "><i class="fa-brands fa-square-instagram social-link"></i></a>
+                        <a href="#" class="text-reset "><i class="fa-brands fa-youtube social-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3">
+                    <h6 class="fw-bold mb-3">Address</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="./TermsAndCond.html" class="text-decoration-none text-muted">Terms &
+                                Conditions</a></li>
+                        <li class="mb-2"><a href="./ContactUs.html" class="text-decoration-none text-muted">Contact
+                                Us</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 ">
+                    <h6 class="fw-bold mb-3">My Account</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="./RealLogin.html" class="text-decoration-none text-muted">Sign In</a>
+                        </li>
+                        <li class="mb-2"><a href="./Cart.html" class="text-decoration-none text-muted">View Cart</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h6 class="fw-bold">Secured Payment Gateways</h6>
+                    <div class="d-flex">
+                        <img class="img-fluid" src="images/payment-method.png" height="30" alt="Visa">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mt-0 text-muted">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted small">&copy; 2026 ITI. All rights reserved</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-muted small">Website Done By : Abd El-Rahman Magdy & Fatma El-Zahraa Ahmed</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let ItemsNumber = 0
+        function ShowCartContent() {
+            let TotalValue = 0
+            let GetTheStringCart = localStorage.getItem("ShoppingCart")
+            let ShopppingCart = JSON.parse(GetTheStringCart)
+            let TableBody = document.getElementById("TableBody")
+            document.getElementById("SubtotalSpan").textContent = "$0"
+            document.getElementById("ShippingSpan").textContent = "$0"
+            document.getElementById("FinalTotal").textContent = "$0"
+            if (ShopppingCart.length === 0) {
+                TableBody.innerHTML = '<tr><td colspan="6" class="text-center p-5">Your cart is empty!</td></tr>';
+                return;
+            }
+            TableBody.innerHTML = ""
+            ShopppingCart.forEach(product => {
+                console.log(product)
+                TotalValue += (product.quantity * product.price)
+                ItemsNumber++;
+                TableBody.innerHTML += `
+
+                 <tr class="text-center">
+                        <td>
+                            <img class="img-thumbnail" src="${product.img}" alt="Product added to cart">
+                        </td>
+                        <td class="text-center">
+                            <h6 class="ProductTitle mb-0">${product.title}</h6>
+                            <small class="text-muted">${product.descrip}</small>
+                        </td>
+                        <td>$${product.price}</td>
+                        <td>
+                            <input type="number" class="form-control" value="${product.quantity}" style="width: 70px;">
+                        </td>
+                        <td class="text-secondary fw-bold">$${(product.price * product.quantity).toFixed(2)}</td>
+                        <td>
+                            <button onclick="RemoveFromCart(${product.id})" class="btn text-muted btn-link p-0 border-0"><i class="fa-solid fa-trash-can"
+                                    style="font-size:larger;"></i></button>
+                        </td>
+
+                    </tr>
+                `
+            }
+
+
+            );
+            localStorage.setItem("ItemsInCart", ItemsNumber)
+            document.getElementById("SubtotalSpan").textContent = "$" + (TotalValue).toFixed(2)
+            document.getElementById("ShippingSpan").textContent = "$" + '50'
+            document.getElementById("FinalTotal").textContent = "$" + (TotalValue + 50).toFixed(2)
+
+        }
+
+        function RemoveFromCart(productId) {
+            ItemsNumber--;
+            localStorage.setItem("ItemsInCart", ItemsNumber)
+            let GetTheStringCart = localStorage.getItem("ShoppingCart")
+            let ShopppingCart = JSON.parse(GetTheStringCart)
+
+            UpdatedShoppingCart = ShopppingCart.filter(p => p.id !== productId)
+
+            localStorage.setItem("ShoppingCart", JSON.stringify(UpdatedShoppingCart))
+            console.log(localStorage.getItem("ShoppingCart"))
+            ShowCartContent()
+        }
+        ShowCartContent()
+
+    </script>
+
+</body>
+
+</html>

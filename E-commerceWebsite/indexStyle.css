@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.TopHeader {
+    background: #f8f9fb;
+    border-bottom: 1px solid #ddd;
+    padding: 0.875rem 0;
+}
+
+.Navbar {
+    min-height: 6.5rem;
+}
+
+.NavbarLogoImg {
+    width: 150px;
+}
+
+.NavbarItemLink {
+    font-weight: 700;
+    color: #222;
+}
+
+.HeaderSearch {
+    position: relative;
+    max-width: 340px;
+    margin-right: 1.5rem;
+}
+
+.SearchInput {
+    height: 45px;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.HeaderSearchBtn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+}
+
+
+.NavbarBtns {
+    position: relative;
+    margin-left: 1rem;
+}
+
+.NavbarBtns img {
+    width: 30px;
+}
+
+.CountAddedItems {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #00797a;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.HomeContainer {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+@media (max-width: 991px) {
+    .HomeContainer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .HeaderSearch {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+.HomeTitle {
+    font-weight: 600;
+}
+
+#HomeTitleInnerContent {
+    color: #00797a;
+}
+
+.HomeBtn {
+    display: inline-block;
+    background: #00797a;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 4px;
+}
+
+
+.Slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.swiper-button-next-custom,
+.swiper-button-prev-custom {
+    width: 35px;
+    height: 35px;
+    background: #f0f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.cat-card {
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 12px;
+    text-align: center;
+}
+
+.image-holder {
+    background: #f6f6f6;
+    height: 150px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-holder img {
+    max-width: 80%;
+}
+
+.BtnLink,
+.BtnLink:hover {
+    background-color: whitesmoke;
+    color: #00797a;
+    border: solid 1px #00797a;
+}
+
+.nav-pills .nav-link.BtnLink.active {
+    background-color: #00797a;
+    color: whitesmoke;
+    border: solid 1px whitesmoke;
+
+}
+
+.AddCartbtn,.CartBtn {
+    background-color: #00797a;
+    color: white;
+}
+
+.AddCartbtn:hover , .CartBtn:hover {
+    border: solid 1px #00797a;
+    color: #00797a;
+    background-color: white;
+}
+
+
+
+.social-link:hover {
+  color:#00797a;
+}

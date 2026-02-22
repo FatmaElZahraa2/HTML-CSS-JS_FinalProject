@@ -1,0 +1,136 @@
+:root {
+    --first-color: #00797a;
+    --first-color-alt: #f8f9fb;
+    --second-color: #ffe3bb;
+    --title-color: #211e1d;
+    --text-color: #465b54;
+    --text-color-light: #90908f;
+    --body-color: #feffff;
+    --container-color: #efeff0;
+    --border-color: #c7e4d0;
+    --border-color-alt: #e4e7e0;
+}
+
+
+body {
+    font-family: sans-serif;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.TopHeader {
+    background-color: #f8f9fb;
+    border-bottom: 1px solid var(--first-color);
+    padding: 0.875rem 0;
+}
+
+.HeaderContact span:first-child {
+    margin-right: 2rem;
+}
+
+.Navbar {
+    min-height: 6.5rem;
+}
+
+.NavbarLogoImg {
+    width: 150px;
+}
+
+.NavbarMenu {
+    width: 100%;
+}
+
+.NavbarList {
+    gap: 2.5rem;
+}
+
+.NavbarItemLink {
+    color: var(--title-color);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.NavbarItemLink:hover,
+.active-Link {
+    color: var(--first-color);
+}
+
+.HeaderSearch {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    margin-right: 1.5rem;
+}
+
+.SearchInput {
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--border-color);
+    padding: 0 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.HeaderSearchBtn {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.NavbarSearchButtons {
+    gap: 1.25rem;
+}
+
+.NavbarBtns {
+    position: relative;
+}
+
+.NavbarBtns img {
+    width: 30px;
+}
+
+.CountAddedItems {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 18px;
+    height: 18px;
+    background-color: var(--first-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.687rem;
+    line-height: 18px;
+    text-align: center;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 991px) {
+    .HeaderSearch {
+        margin: 1rem 0;
+        max-width: 100%;
+    }
+
+    .NavbarSearchButtons {
+        margin-bottom: 1rem;
+    }
+}
+

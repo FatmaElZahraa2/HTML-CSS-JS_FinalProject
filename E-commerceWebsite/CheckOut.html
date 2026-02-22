@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="indexStyle.css">
+    <script src="https://kit.fontawesome.com/eadda94817.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/eadda94817.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <header>
+
+        <div class="TopHeader">
+            <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div class="HeaderContact">
+                    <span>+971 (58) 135-9871</span>
+                    <span>Our Location</span>
+                </div>
+
+                <p class="mb-0">Super Value Deals - Save More with coupons</p>
+                <a id="nameOfLoggedIn" href="./Register.html">Register</a>
+            </div>
+        </div>
+        <nav class="Navbar navbar navbar-expand-lg container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.svg" class="NavbarLogoImg" alt="Logo">
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="MainNavbar">
+                <ul class="navbar-nav me-auto gap-lg-4">
+                    <li class="nav-item"><a href="./index.html" class="nav-link NavbarItemLink active-Link">Home</a>
+                    </li>
+                    <li class="nav-item"><a href="./Products.html" class="nav-link NavbarItemLink">Shop</a></li>
+                    <li class="nav-item"><a href="./FAQ.html" class="nav-link NavbarItemLink">FAQ</a></li>
+                    <li class="nav-item"><a href="./Cart.html" class="nav-link NavbarItemLink">Cart</a></li>
+                    <li class="nav-item"><a href="./ContactUs.html" class="nav-link NavbarItemLink">Contact Us</a></li>
+                </ul>
+
+                <div class="container py-3 w-50">
+                    <div class="position-relative">
+                        <div class="input-group">
+                            <input type="text" id="InputBox" class="form-control" placeholder="Search for items...">
+                            <span class="input-group-text">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                        <div class="ResultBox position-absolute w-100 bg-white border rounded mt-1 shadow"
+                            style="z-index: 1000; max-height: 250px; overflow-y:auto;"></div>
+                    </div>
+                </div>
+                <div class="NavbarSearchButtons d-flex">
+                    <a class="NavbarBtns">
+                        <img src="images/icon-heart.svg">
+                        <span class="CountAddedItems">0</span>
+                    </a>
+                    <a class="NavbarBtns" href="Cart.html">
+                        <img src="images/icon-cart.svg">
+                        <span id="CountCartAddedItems" class="CountAddedItems">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container" id="CheckOutPage">
+        <div class="checkout-container container bg-white d-flex  row g-4">
+            <div class=" col-md-6 mb-4 ">
+                <div class="card shadow-sm rounded-3">
+                    <h5 class="card-header text-white" style="background-color: #00797a;">Order Summary</h5>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush mb-3" id="ContainerOrders">
+                        </ul>
+                        <hr class="border border-dotted border-secondary opacity-50">
+                        <div id="OrderTotals">
+                            <div class="d-flex justify-content-between"> <span>Subtotal</span> <strong id="Subtotal">0
+                                    EGP</strong> </div>
+                            <div class="d-flex justify-content-between"> <span>Delivery Fee</span> <strong
+                                    id="DeliveryFee">309.67 EGP</strong> </div>
+                            <div class="text-white p-2 rounded mt-2 d-flex justify-content-between"
+                                style="background-color: #00797a;"> <span>Total</span>
+                                <strong id="Total">0 EGP</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm rounded-3">
+                    <h5 class="card-header text-white" style="background-color: #00797a;">Shipping Method</h5>
+                    <div class="card-body">
+                        <form id="CheckoutForm">
+                            <div class="mb-3"> <label class="form-label">Choose a shipping option:</label>
+                                <div class="form-check mb-2"> <input class="form-check-input" type="radio"
+                                        name="shippingMethod" id="doorDelivery" value="door" checked required> <label
+                                        class="form-check-label" for="doorDelivery">Door Delivery</label> </div>
+                                <div class="form-check mb-2"> <input class="form-check-input" type="radio"
+                                        name="shippingMethod" id="storePickup" value="pickup" required> <label
+                                        class="form-check-label" for="storePickup">Store Pickup</label> </div>
+                            </div>
+                            <hr>
+                            <h6 class="mt-4 fst-italic fw-bolder">Your Personal Info</h6>
+                            <div class="mb-3"><input type="text" class="form-control" id="chkOutFullName"
+                                    placeholder="Full Name" required></div>
+                            <div class="mb-3"><input type="tel" class="form-control" id="chkOutPhoneNumber"
+                                    placeholder="Phone Number" required></div>
+                            <h6 class="mt-4 fst-italic fw-bolder">Your Address Details</h6>
+                            <div class="mb-3"><input type="text" class="form-control" id="chkOutStreetAddress"
+                                    placeholder="Street Address" required></div>
+
+                            <div class="mb-3"><input type="text" class="form-control" id="chkOutCity" placeholder="City"
+                                    required></div>
+
+                            <div class="mb-3"><input type="text" class="form-control" id="chkOutZipCode"
+                                    placeholder="Zip Code" required></div>
+                            <div class="mb-3">
+                                <p class="my-0"></p> <textarea class="form-control text-wrap" id="notes" rows="3"
+                                    placeholder=" Additional Notes : If you have any details for delivery"></textarea>
+                            </div>
+                            <button id="id_proceedToPayment" type="submit" class="btn text-white w-100"
+                                style="background-color: #00797a;">Proceed to Payment</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="border-top">
+        <div class="container-fluid py-3 mb-3 border-bottom" style="background-color: #abcac5;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 d-flex align-items-center ">
+                        <i class="bi bi-envelope-at fs-3 me-3 text-muted"></i>
+                        <h5 class="mb-0 me-3">Sign up to Newsletter</h5>
+                        <span class="text-muted small">...and receive $25 coupon for first shopping.</span>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="email" class="form-control py-2" placeholder="Enter your email">
+                            <button class="btn btn-dark px-4" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="images/logo.svg" alt="Evara" class="mb-3" style="height: 40px;">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <p class="text-muted mb-1 small"><strong>Address:</strong> ITI - Knowledge City - Egypt</p>
+                    <p class="text-muted mb-1 small"><strong>Phone:</strong> +971 (58) 135-9871</p>
+
+                    <h6 class="fw-bold">Follow US</h6>
+                    <div class="d-flex gap-4 text-muted fs-4 d-inline">
+                        <a href="#" class="text-reset  "><i class="fa-brands fa-facebook-f social-link"></i></a>
+                        <a href="#" class="text-reset "><i class="fa-brands fa-twitter social-link"></i></a>
+                        <a href="#" class="text-reset "><i class="fa-brands fa-square-instagram social-link"></i></a>
+                        <a href="#" class="text-reset "><i class="fa-brands fa-youtube social-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3">
+                    <h6 class="fw-bold mb-3">Address</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="./TermsAndCond.html" class="text-decoration-none text-muted">Terms &
+                                Conditions</a></li>
+                        <li class="mb-2"><a href="./ContactUs.html" class="text-decoration-none text-muted">Contact
+                                Us</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 ">
+                    <h6 class="fw-bold mb-3">My Account</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="./RealLogin.html" class="text-decoration-none text-muted">Sign In</a>
+                        </li>
+                        <li class="mb-2"><a href="./Cart.html" class="text-decoration-none text-muted">View Cart</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h6 class="fw-bold">Secured Payment Gateways</h6>
+                    <div class="d-flex">
+                        <img class="img-fluid" src="images/payment-method.png" height="30" alt="Visa">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mt-0 text-muted">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted small">&copy; 2026 ITI. All rights reserved</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-muted small">Website Done By : Abd El-Rahman Magdy & Fatma El-Zahraa Ahmed</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    
+        const container = document.getElementById("ContainerOrders");
+        let UserOrders = JSON.parse(localStorage.getItem("ShoppingCart")) || [];
+
+        function addToOrders() {
+            container.innerHTML = "";
+            let subtotal = 0;
+
+            UserOrders.forEach((order) => {
+                subtotal += (parseFloat(order.price) * order.quantity);
+                container.innerHTML += `
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                    <span class="fw-bolder">   ${order.title}   </span> 
+                    
+                    <strong>${order.price} $</strong>
+                </div>
+                <p class="m-0 fw-bolder"> Qty: ${order.quantity} </p> 
+                <small class="text-muted fst-italic">${order.descrip}</small>
+            </li>
+        `;
+            });
+
+            const deliveryFee = 50;
+            const total = subtotal + deliveryFee;
+
+            document.getElementById("Subtotal").textContent = `${subtotal.toFixed(2)} $`;
+            document.getElementById("DeliveryFee").textContent = `${deliveryFee} $`;
+            document.getElementById("Total").textContent = `${total.toFixed(2)} $`;
+        }
+        window.onload = addToOrders;
+
+        document.getElementById("CheckoutForm").addEventListener("submit", function (e) {
+            e.preventDefault(); 
+
+        });
+
+        addToOrders()
+
+        function testProceedBtn() {
+            document.getElementById("id_proceedToPayment").addEventListener("click", () => {
+                
+                if (document.getElementById('doorDelivery').checked
+
+                    && document.getElementById('chkOutFullName').value
+                    && document.getElementById('chkOutPhoneNumber').value
+                    && document.getElementById('chkOutCity').value
+                    && document.getElementById('chkOutZipCode').value
+                    && document.getElementById('chkOutStreetAddress').value
+                ) {
+                    alert("We will Ship your Order To your Address , Thanks For Your Visit ( ͡• ͜ʖ ͡• )");
+                }
+                else if (
+                    document.getElementById('storePickup').checked
+
+                    && document.getElementById('chkOutFullName').value
+                    && document.getElementById('chkOutPhoneNumber').value
+                    && document.getElementById('chkOutCity').value
+                    && document.getElementById('chkOutZipCode').value
+                    && document.getElementById('chkOutStreetAddress').value
+                ) {
+                    alert("We are waiting you in our store (●'◡'●)");
+                }
+                else if (!storePickup && !doorDelivery) {
+                    alert("select way of shipping before proceeding. 🤠");
+                }
+            });
+
+        }
+        testProceedBtn();
+    </script>
+</body>
+
+
+</html>

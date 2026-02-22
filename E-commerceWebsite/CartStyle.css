@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.TopHeader {
+    background: #f8f9fb;
+    border-bottom: 1px solid #ddd;
+    padding: 0.875rem 0;
+}
+
+.Navbar {
+    min-height: 6.5rem;
+}
+
+.NavbarLogoImg {
+    width: 150px;
+}
+
+.NavbarItemLink {
+    font-weight: 700;
+    color: #222;
+}
+
+.HeaderSearch {
+    position: relative;
+    max-width: 340px;
+    margin-right: 1.5rem;
+}
+
+.SearchInput {
+    height: 45px;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.HeaderSearchBtn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+}
+
+
+.NavbarBtns {
+    position: relative;
+    margin-left: 1rem;
+}
+
+.NavbarBtns img {
+    width: 30px;
+}
+
+.CountAddedItems {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #00797a;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+}
+
+.ProductTitle {
+    color: #00797a;
+}
+
+.ApplyButton,
+.TabelsHeader {
+    background-color: #00797a;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+.ApplyButton:hover {
+    background-color: whitesmoke;
+    color: #00797a;
+    border: solid 1px #00797a;
+}
+
+.img-thumbnail {
+    width: 80px;
+    background-color: #f0f0f0;
+}
+
+.card {
+    border-radius: 10px;
+}
